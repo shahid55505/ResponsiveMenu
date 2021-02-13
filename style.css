@@ -1,0 +1,102 @@
+*{
+ margin:0;
+ padding:0; 
+ box-sizing: border-box;
+
+}
+
+.navbar, .navbar-mob{
+    background-color: salmon;
+    
+}
+.navbar > a{
+
+    color:silver;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 10px 10px 10px 10px;
+    float: left;
+}
+
+.navbar >ul{
+    list-style: none;
+    float: right;
+}
+
+.navbar-mob> ul{
+    list-style: none;
+}
+
+.navbar > ul > li{
+
+    display: inline-block;
+    line-height: 60px;
+    padding: 0px 20px;
+
+}
+
+.navbar-mob > ul >li{
+    line-height: 30px;
+    padding: 0px 20px;
+}
+
+.navbar > ul:last-child{
+    padding-right: 100px;
+}
+
+.navbar > ul > li > a,
+.navbar-mob > ul > li > a{
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+
+.navbar > ul >li:hover,
+.navbar-mob > ul > li:hover{
+    background-color: gray;
+}
+
+.navbar::after{
+    content: " ";
+    display: block;
+    clear: both;
+    *zoom: 1;
+ }
+
+ .navbar-mob, hamburger-btn{
+     display:none;
+ }
+
+@media screen and (max-width:700px){
+
+    .navbar-mob, hamburger-btn{
+        display:block;
+    }
+    .navbar > ul {
+        display: none;
+    }
+    .mob-menu{
+        display: none;
+    }
+
+    .hamburger-btn > .fa-times{
+        display: none;
+    }
+
+    .fa-bars, .fa-times{
+        position:absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 25px;
+
+    }
+    .fa-bars{
+        z-index: 1;
+    }
+
+    .fa-times{
+        z-index: 2;
+    }
+
+}
+
